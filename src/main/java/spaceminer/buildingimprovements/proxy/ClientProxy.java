@@ -1,7 +1,7 @@
 package spaceminer.buildingimprovements.proxy;
 
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import spaceminer.buildingimprovements.client.render.blocks.BlockRenderRegister;
+import spaceminer.buildingimprovements.blocks.ModBlocks;
 import spaceminer.buildingimprovements.item.ModItems;
 
 public class ClientProxy extends CommonProxy {
@@ -10,6 +10,6 @@ public class ClientProxy extends CommonProxy {
 	public void preInit(FMLPreInitializationEvent e) {
 		super.preInit(e);
 		ModItems.initModels();
-	    BlockRenderRegister.registerBlockRenderer();
+		ModBlocks.initModels();
 	}
 }

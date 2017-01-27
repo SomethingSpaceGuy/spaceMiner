@@ -1,6 +1,5 @@
 package spaceminer.buildingimprovements.proxy;
 
-import net.minecraft.item.ItemBlock;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -14,7 +13,7 @@ public class CommonProxy {
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent e) {
 		ModItems.init();
-	    ModBlocks.createBlocks();
+	    ModBlocks.init();
 	}
 	
 	@EventHandler
@@ -25,9 +24,5 @@ public class CommonProxy {
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent e) {
 
-	}
-
-	public void registerItemRenderer(ItemBlock itemBlock, int i, String name) {
-		
 	}
 }

@@ -1,6 +1,9 @@
 package spaceminer.buildingimprovements.item;
 
+import javax.annotation.Nullable;
+
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
@@ -9,13 +12,15 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ItemBase extends Item {
 	
-	protected String name;
-	
-	public ItemBase(String name) {
+	public ItemBase(String name, @Nullable CreativeTabs tab) {
 		setUnlocalizedName(name);
 		setRegistryName(name);
-		setCreativeTab(null);
+		setCreativeTab(tab);
 		GameRegistry.register(this);
+	}
+	
+	public ItemBase(String name){
+		this(name, null);
 	}
 	
 	@SideOnly(Side.CLIENT)

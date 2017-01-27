@@ -5,6 +5,7 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import spaceminer.buildingimprovements.item.ModItems;
 import spaceminer.buildingimprovements.proxy.CommonProxy;
 
 @Mod(modid = BuildingImprovements.MODID, name = BuildingImprovements.MODNAME, version = BuildingImprovements.MODNAME, acceptedMinecraftVersions = "[1.10.2]")
@@ -34,5 +35,7 @@ public class BuildingImprovements {
 	public void postInit(FMLPostInitializationEvent event) {
 		proxy.postInit(event);
 	}
+	
+	
 	
 }
